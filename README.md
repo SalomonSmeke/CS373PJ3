@@ -8,5 +8,5 @@ These are very simple examples. Focused on the most basic possible implementatio
 
 ###Status:
 
-Proxy: Completed.
-Observer: 0%.
+Proxy: Completed.<br>
+Observer: 1%.
