@@ -23,6 +23,12 @@ public class example {
 	 * state of said button. And trigger some code when its pressed. In this way,
 	 * much of GUI's and the internet's codebases are tons of observers!
 	 * 
+	 * A more classical version of the pattern is located at: http://www.tutorialspoint.com/design_pattern/observer_pattern.htm
+	 * This version shows the concurrent nature of observer very clearly.
+	 * 
+	 * I based my example off of: https://sourcemaking.com/design_patterns/observer/java/1
+	 * Except I used built in things to avoid messing with threads too much.
+	 * 
 	 */
 	public static String message = "Ill buy it for 10$! What will you sell for?";
 	public static boolean answered = false;
