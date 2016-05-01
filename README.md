@@ -20,7 +20,7 @@ Observer: Completed. [example.java]<br>
 
 ####P4:
 Builder: Completed. [workbookFormatter.java]<br>
-Visitor: 100%. [Yards.java]<br>
+Visitor: 50%<br>
 
 ####Legend:
 
