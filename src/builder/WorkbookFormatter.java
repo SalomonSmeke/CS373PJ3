@@ -5,43 +5,44 @@ import java.util.Scanner;
 public class WorkbookFormatter {
 	static Scanner sc = new Scanner (System.in);
 	public static void main(String []args){
-		String[] availableConversions = new String[]{"CSV","TSV"};
+
 		char EOL = '\n';
-		
+
 		String [][] worksheet = new String[
-		promptInt("Enter the amount of rows in your Worksheet" + EOL,"INVALID INPUT: Not a number" + EOL)][
-		promptInt("Enter the amount of columns in your Worksheet" + EOL,"INVALID INPUT: Not a number" + EOL)];
-		
+		                                   promptInt("Enter the amount of rows in your Worksheet" + EOL,"INVALID INPUT: Not a number" + EOL)][
+		                                                                                                                                      promptInt("Enter the amount of columns in your Worksheet" + EOL,"INVALID INPUT: Not a number" + EOL)];
+
 		getValues(worksheet);
-		convert(worksheet,availableConversions);
-		
+		convert(worksheet);
 	}
-	
-	public static void convert(String [][] request, String []choices){
+
+	public static void convert(String [][] request){
 		char EOL = '\n';
+		String [] choices = Converter.getAvailable();
 		String conversion = promptInVals(choices,"What format do you want to convert to?"+EOL,"Thats not a valid choice"+EOL);
+		print(Converter.convertInto(conversion, request));
 	}
-	
+
 	public static void getValues(String [][] request){
 		String prompt = "Enter Value For: ";
-		
+
 		for (int x = 0; x < request.length; x++){
 			for (int y = 0; y < request[x].length; y++){
-				request[x][y] = promptString(prompt + x + "," + y);
+				request[x][y] = promptString(prompt + x + "," + y + ": ");
 			}
 		}
 	}
-		
+
 	public void printLn(String print){
 		System.out.println(print);
 	}
-	
+
 	public static void print(String print){
 		System.out.print(print);
 	}
-	
+
 	public static String promptInVals(String[] vals, String prompt, String fallback){
-		
+
 		print(prompt);
 		print("Available choices: ");
 		for (int i = 0; i < vals.length; i++){
@@ -54,7 +55,7 @@ public class WorkbookFormatter {
 		}
 		return in;
 	}
-	
+
 	private static boolean contains(String[] vals, String in) {
 		for (int i = 0; i < vals.length; i++){
 			if (in.equals(vals[i])) return true;
@@ -67,7 +68,7 @@ public class WorkbookFormatter {
 		String in = sc.nextLine();
 		return in;
 	}
-	
+
 	public static int promptInt(String prompt, String fallback){
 		print(prompt);
 		String in = sc.nextLine();
@@ -77,13 +78,13 @@ public class WorkbookFormatter {
 		}
 		return Integer.parseInt(in);
 	}
-	
+
 	public static boolean isInt(String check){
-	     try {  
-	         Integer.parseInt(check);  
-	         return true;
-	      } catch (NumberFormatException e) {  
-	         return false;  
-	      }  
+		try {  
+			Integer.parseInt(check);  
+			return true;
+		} catch (NumberFormatException e) {  
+			return false;  
+		}  
 	}
 }
