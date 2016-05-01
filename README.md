@@ -17,5 +17,5 @@ Proxy: Completed.<br>
 Observer: Completed.<br>
 
 ####P4:
-Builder: 1%<br>
+Builder: 100%<br>
 Visitor: 0%<br>

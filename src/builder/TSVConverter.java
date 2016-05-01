@@ -1,11 +1,17 @@
 package builder;
 
-public class TSVConverter implements _Converter{
+public class TSVConverter{
 
-	@Override
-	public String parseInto(String[][] values) {
-		// TODO Auto-generated method stub
-		return null;
+	public static String parseInto(String[][] values) {
+		char EOL = '\n';
+		String out = "";
+		for (int y = 0; y < values.length; y++){
+			for (int x = 0; x < values[y].length; x++){
+				out = out+values[y][x]+"	";
+			}
+			out = out + EOL;
+		}
+		return out;
 	}
 
 }
