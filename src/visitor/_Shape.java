@@ -1,5 +1,5 @@
 package visitor;
 
 public interface _Shape {
-	public void accept (Visitor visitor);
+	public void accept (_Visitor visitor);
 }

@@ -3,7 +3,7 @@ package visitor;
 public class Square implements _Shape{
 	private double x,y,width,height;
 	
-	public void accept(Visitor visitor){
+	public void accept(_Visitor visitor){
 		visitor.visit(this);
 	}
 	

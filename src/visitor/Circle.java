@@ -3,7 +3,7 @@ package visitor;
 public class Circle implements _Shape{
 	private double x,y,radius;
 	
-	public void accept(Visitor visitor){
+	public void accept(_Visitor visitor){
 		visitor.visit(this);
 	}
 	
