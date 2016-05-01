@@ -6,16 +6,18 @@
 
 Intended as a class assignmenr for Dr. Berhane Zewdie's OBJFRWKS&PTTRS
 
-Please view the "example.java" classes within each pattern package for usage and an explanation on what problem the pattern implementation addresses.
+Please view the classes within each pattern package for usage and an explanation on what problem the pattern implementation addresses.
+
+I have added the name of the entry points for the classes next to the following section.
 
 These are very simple examples. Focused on the most basic possible implementation of each pattern.
 
 ###Status:
 
 ####P3:
-Proxy: Completed.<br>
-Observer: Completed.<br>
+Proxy: Completed. [example.java]<br>
+Observer: Completed. [example.java]<br>
 
 ####P4:
-Builder: 100%<br>
-Visitor: 0%<br>
+Builder: Completed. [workbookFormatter.java]<br>
+Visitor: 10%<br>

@@ -2,6 +2,14 @@ package builder;
 
 import java.util.Scanner;
 
+/*
+ * Basically the same example as in class. We have an entry of data that must be printed.
+ * 
+ * We offload the task to a builder (Converter) that will do the conversions for us. We just pick the format.
+ * Useful because it decouples the logic of the formater from the converter, and is flexible in the adding
+ * of new formats (just add a class that handles it).
+ */
+
 public class WorkbookFormatter {
 	static Scanner sc = new Scanner (System.in);
 	public static void main(String []args){
@@ -11,7 +19,6 @@ public class WorkbookFormatter {
 		String [][] worksheet = new String[
 		                                   promptInt("Enter the amount of rows in your Worksheet" + EOL,"INVALID INPUT: Not a number" + EOL)][
 		                                                                                                                                      promptInt("Enter the amount of columns in your Worksheet" + EOL,"INVALID INPUT: Not a number" + EOL)];
-
 		getValues(worksheet);
 		convert(worksheet);
 	}
